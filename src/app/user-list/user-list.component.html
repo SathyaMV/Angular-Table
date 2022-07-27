@@ -1,0 +1,29 @@
+
+<div class="card">
+    <div class="card-body">
+        <table class="table">
+            <thead class="thear-dark">
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">User Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Mobile</th>
+                <th scope="col">Designation</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of userList; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{user.userName}}</td>
+                <td>{{user.userEmail}}</td>
+                <td>{{user.userMobile}}</td>
+                <td>{{user.userDesignation}}</td>
+                <td>
+                    <button (click)="delete(user.userID)" class="btn btn-sm btn-danger">X</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
